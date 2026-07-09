@@ -1,0 +1,8 @@
+langchain
+langchain-core
+langgraph
+langchain-mistralai
+python-dotenv
+tavily-python
+requests
+rich
