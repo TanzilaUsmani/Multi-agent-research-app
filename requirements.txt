@@ -6,3 +6,4 @@ python-dotenv
 tavily-python
 requests
 rich
+beautifulsoup4
