@@ -4,9 +4,12 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from tools import web_search,scrape_url
 import os
+import streamlit as st
 from dotenv import load_dotenv
 load_dotenv()
-
+# Streamlit Cloud Secrets se API key load karega
+if "MISTRAL_API_KEY" in st.secrets:
+    os.environ["MISTRAL_API_KEY"] = st.secrets["MISTRAL_API_KEY"]
 #model setup
 llm=ChatMistralAI(model="mistral-small-2603",temperature=0)
 
